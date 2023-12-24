@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h3>Upload file to Amazon S3</h3>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <label for="photo">
+        Type
+        <select name="type" required id="type">
+          <option value="photo">Photo</option>
+          <option value="video">Video</option>
+        </select>
+      </label>
+      <br /><br />
+      <label for="file">
+        File:
+        <input type="file" name="file" required id="file" multiple />
+      </label>
+      <br /><br />
+      <button type="submit">Upload</button>
+    </form>
+  </body>
+</html>
